@@ -1,0 +1,71 @@
+Final Goals
+	Begin testing
+		Test with server on dif pc (still lan)
+		
+	Make basic ai that doesnt hit the walls
+	
+*Completed
+	Add text boxes for ip and port.  Defaults to lan if nothing entered.
+	Add in vr menu support with a cursed keyboard
+	Add in wait for at least 2 players before start (accidentally)
+	Add in restart round when there is a winner (took forever and was a pain to debug)
+	Tweaked sensitivity of cycle handle bars.
+
+Known Issues
+	Limit of four players before arrays will break for not enough color choices/spawn locations etc
+	
+
+Goals:
+	VR Hand driving
+		+Added Hands that can pinch/grab
+		*Move colliders/hinge/rigidbody to the model so leaning doesnt tilt headset camera
+		*Add grabbable invisible cubes on handle bars
+		*Make it so bike doesnt fall over immediately.
+		*Make sure can still turn
+		
+	Player 3 in a game, does not move client side...crashes normally on server
+	On connect, move to neon grid
+			In theory this done.
+			Needs to have the scene change occur AFTER successful connection, if and only if connection was successful.
+	Add IP Address textbox
+	VR menu w/ typing
+	Music?
+
+	Would Be Nice:
+		Grid Neon Flashing as scene here:  https://www.youtube.com/watch?v=g8A0yojNfhA
+		Even the particles effects seem neat.
+		Random start position and rotation (use bag and random)
+		Accelerate when close to walls.  Ie give player a 2nd, bigger collider that when triggers accelerates the player
+		Adjust engine humming pitch to match player speed.  
+			Can either send speed value down from server
+			Or calculate it from position being sent down, ie keep track of previous position
+		Make minimap more visible and better looking
+		Make it so u can exceed 45 degrees in a turn, however, if u aren't going fast enough u fall over and crash.
+			Math: https://www.wired.com/2015/09/just-far-can-motorcycle-lean-turn/
+
+Test:
+	Multiplayer collisions
+		For the most part works.
+		However, there is an issue where the very first collidable box is behind the light trail's start.
+		This means u can collide with an invisible object (bad)
+		This I believe was done so that players dont immediately collide.
+		Fix is to skip first drop box.
+			Fix implemented tho there is some fine tuning to be done.  Can technically graze the trail start without colliding.
+
+
+87.95474
+directional .4 intensity
+
+play with generate lighting data on/off
+	.75 int on head light
+	set culling to only light trails
+	add trailpoint to light trails layer
+
+	map light intesnity to 14.32
+
+	vr rig z -.52
+
+
+
+turn off post processing in minimap camera cull out the floors (and maybe walls)
+shadows/lights etc off on minimap

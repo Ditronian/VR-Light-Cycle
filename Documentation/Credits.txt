@@ -1,0 +1,18 @@
+Audio
+	Engine Humming:
+		Creative Commons, creator waives all rights.
+		https://freesound.org/people/arnaljl/sounds/67878/
+
+	Collision:
+		Purchased License.
+
+Graphics
+	Light Cycle Model 
+		CC-BY
+		Attribution required.
+		Link: (Google Poly)
+		
+Misc
+	VR Keyboard
+		http://talesfromtherift.com/vr-canvas-keyboard/
+		License unknown
